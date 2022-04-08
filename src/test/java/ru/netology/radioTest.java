@@ -9,14 +9,14 @@ class radioTest {
 
     private Radio radio = new Radio(20);
 
-    /*@ParameterizedTest
-    @CsvSource(value = {"station is -1,-1,0", "station is 0,0,0", "station is 1,1,1", "station is 8,8,8", "station is 9,9,9", "station is 10,10,0"})
+    @ParameterizedTest
+    @CsvSource(value = {"station is -1,-1,0", "station is 0,0,0", "station is 1,1,1", "station is 18,18,18", "station is 19,19,19", "station is 20,20,0"})
     public void setStationTest(String testName, int stationNum, int expected) {
 
         radio.setCurrentStation(stationNum);
         int actual = radio.getCurrentStation();
         assertEquals(expected, actual);
-    }*/
+    }
 
     @ParameterizedTest
     @CsvSource(value = {"station is 0,0,1", "station is 1,1,2", "station is 18,18,19", "station is 19,19,0"})
@@ -36,13 +36,13 @@ class radioTest {
         assertEquals(expected, actual);
     }
 
-    /*@ParameterizedTest
-    @CsvSource(value = {"volume is -1,-1,0", "volume is 0,0,0", "volume is 1,1,1", "volume is 9,9,9", "volume is 10,10,10", "volume is 11,11,0"})
+    @ParameterizedTest
+    @CsvSource(value = {"volume is -1,-1,0", "volume is 0,0,0", "volume is 1,1,1", "volume is 99,99,99", "volume is 100,100,100", "volume is 101,101,0"})
     public void setVolumeTest(String testName, int volume, int expected) {
         radio.setVolume(volume);
         int actual = radio.getVolume();
         assertEquals(expected, actual);
-    }*/
+    }
 
     @ParameterizedTest
     @CsvSource(value = {"volume is 0,0,1", "volume is 1,1,2", "volume is 99,99,100", "volume is 100,100,100"})
